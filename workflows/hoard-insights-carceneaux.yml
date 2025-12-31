@@ -1,0 +1,22 @@
+name: Collect repository insights for carceneaux
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight
+  workflow_dispatch:
+
+jobs:
+  hoard-insights:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Collect insights
+        uses: carceneaux/repository-insights-hoarder@v1.0.0
+        with:
+          insights_token: ${{ secrets.CARCENEAUX_TOKEN }}
+          commit_token: ${{ secrets.COMMIT_TOKEN }}
+          owner: carceneaux
+          all_repos: 'true'
+          hoard_owner: carceneaux
+          hoard_repo: repository_insights
+          branch: 'main'
+          directory: '.'

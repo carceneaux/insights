@@ -1,4 +1,4 @@
-name: Collect repository insights for veeamhub
+name: VeeamHub Insights
 
 on:
   schedule:

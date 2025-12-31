@@ -1,4 +1,4 @@
-name: Collect repository insights for carceneaux-forks
+name: carceneaux-forks insights
 
 on:
   schedule:

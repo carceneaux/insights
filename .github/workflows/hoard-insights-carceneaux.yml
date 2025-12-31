@@ -1,4 +1,4 @@
-name: Collect repository insights for carceneaux
+name: carceneaux insights
 
 on:
   schedule:

@@ -9,12 +9,34 @@ jobs:
   hoard-insights:
     runs-on: ubuntu-latest
     steps:
-      - name: Collect insights
-        uses: carceneaux/repository-insights-hoarder@v1.0.0
+      - name: carceneaux insights
+        uses: carceneaux/repository-insights-hoarder@v1.0.1
         with:
           insights_token: ${{ secrets.CARCENEAUX_TOKEN }}
           commit_token: ${{ secrets.COMMIT_TOKEN }}
           owner: carceneaux
+          all_repos: 'true'
+          hoard_owner: carceneaux
+          hoard_repo: repository_insights
+          branch: 'main'
+          directory: '.'
+      - name: carceneaux-forks insights
+        uses: carceneaux/repository-insights-hoarder@v1.0.1
+        with:
+          insights_token: ${{ secrets.FORKS_TOKEN }}
+          commit_token: ${{ secrets.COMMIT_TOKEN }}
+          owner: carceneaux-forks
+          all_repos: 'true'
+          hoard_owner: carceneaux
+          hoard_repo: repository_insights
+          branch: 'main'
+          directory: '.'
+      - name: veeamhub insights
+        uses: carceneaux/repository-insights-hoarder@v1.0.1
+        with:
+          insights_token: ${{ secrets.VEEAMHUB_TOKEN }}
+          commit_token: ${{ secrets.COMMIT_TOKEN }}
+          owner: veeamhub
           all_repos: 'true'
           hoard_owner: carceneaux
           hoard_repo: repository_insights

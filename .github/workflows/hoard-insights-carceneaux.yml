@@ -2,7 +2,7 @@ name: Collect repository insights
 
 on:
   schedule:
-    - cron: '0 23 * * *' # Runs daily at midnight
+    - cron: '0 23 * * *' # Runs daily at 11:00 PM UTC
   workflow_dispatch:
 
 jobs:

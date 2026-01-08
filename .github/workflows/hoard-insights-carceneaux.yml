@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: carceneaux insights
-        uses: carceneaux/repository-insights-hoarder@v1.0.2
+        uses: carceneaux/repository-insights-hoarder@v1.0.3
         with:
           insights_token: ${{ secrets.CARCENEAUX_TOKEN }}
           commit_token: ${{ secrets.COMMIT_TOKEN }}
@@ -21,7 +21,7 @@ jobs:
           branch: 'main'
           directory: '.'
       - name: carceneaux-forks insights
-        uses: carceneaux/repository-insights-hoarder@v1.0.2
+        uses: carceneaux/repository-insights-hoarder@v1.0.3
         with:
           insights_token: ${{ secrets.FORKS_TOKEN }}
           commit_token: ${{ secrets.COMMIT_TOKEN }}
@@ -32,7 +32,7 @@ jobs:
           branch: 'main'
           directory: '.'
       - name: veeamhub insights
-        uses: carceneaux/repository-insights-hoarder@v1.0.2
+        uses: carceneaux/repository-insights-hoarder@v1.0.3
         with:
           insights_token: ${{ secrets.VEEAMHUB_TOKEN }}
           commit_token: ${{ secrets.COMMIT_TOKEN }}
